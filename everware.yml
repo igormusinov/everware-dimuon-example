@@ -1,0 +1,12 @@
+container:
+ build: .
+ image: "container tag"
+ ssl:
+ - "enabled"
+ volumes: 
+ - "http://www.cern.ch"
+ ports:
+ - "8000:8000"
+ environment:
+ - TOKEN=token
+ env_file: .env
